@@ -1,4 +1,6 @@
 import firebase from "firebase/app";
+import'firebase/auth';
+import'firebase/database';
 
 
 
@@ -13,5 +15,7 @@ const config =
     messagingSenderId: "295210810969",
     appId: "1:295210810969:web:d4bcbe9fda1975facdbb48"
   };
-  const app = firebase.initializeApp(config)
+  const app = firebase.initializeApp(config);
+  export const auth = app.auth();
+  export const database = app.database();
   
